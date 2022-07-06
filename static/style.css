@@ -1,0 +1,128 @@
+:root {
+    --Purple: #5333ed;
+    --Cyan: #2cd4d9;
+    --Gray: #6e7076;
+}
+
+body {
+    margin: 0 auto;
+    color: var(--Gray);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+.info {
+    width: 40%;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    background: var(--Purple);
+    justify-content: space-between;
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+}
+
+nav h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    
+}
+
+nav h1:hover {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+        text-shadow:0px 0px 30px #fdec6e;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    
+}
+
+nav ul li {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+
+}
+
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    text-shadow:0px 0px 30px #fdec6e;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orders {
+    width: 300px;
+    height: 600px;
+    overflow: scroll;
+    border: 2px solid var(--Gray);
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.orders-inner {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.main-single-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-order-box {
+    border: 2px solid var(--Gray);
+    margin-top: 10px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.single-order-box-inner{
+    margin-left: 10px;
+}
+
+.footer-wrapper {
+    width: 100vw;
+    height: 50px;
+    background-color: var(--Purple);
+    position: absolute;
+    bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    color: white;
+
+}
+
+.go-back {
+    color: var(--Gray);
+    text-decoration: none;
+}

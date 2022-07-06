@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Freek</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,900&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1c118868a9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 id="title">GameFreek</h1>
+            <ul>
+                <li><a href="/orders">Home</a></li>
+                <li><a href="/orders">About</a></li>
+                <li><a href="/orders">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="hero-wrapper">
+            <div class="info">
+                <h2>Online orders</h2>
+                <h4>Please find all orders in scroll box on the right.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consectetur rem tenetur soluta
+                    mollitia, tempora beatae, necessitatibus repudiandae qui atque perspiciatis. Veritatis vitae omnis
+                    nihil repudiandae quasi dolorum libero eaque.</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consectetur rem tenetur soluta
+                    mollitia, tempora beatae, necessitatibus repudiandae qui atque perspiciatis. Veritatis vitae omnis
+                    nihil repudiandae quasi dolorum libero eaque.</p>
+
+            </div>
+            <div class="orders">
+                <div class="orders-inner">
+                    {% for order in orders %}
+                    <hr>
+                    <h2>Name: {{ order.customer_name}}</h2>
+                    <h3>Quantity: {{ order.quantity}}</h3>
+                    <h3>Game: {{ order.game_title}}</h3>
+                    <h5>Date: {{ order.order_date}}</h5>
+                    <a href="/order/{{order.index}}">
+                        <h5>view order</h5>
+                    </a>
+                    <hr>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <h4>Copyright © 2022 Game Freek Inc. All rights reserved.</h4>
+        </div>
+    </footer>
+
+</body>
+
+</html>

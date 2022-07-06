@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order number: </title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,900&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1c118868a9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>GameFreek</h1>
+            <ul>
+                <li><a href="/orders">Home</a></li>
+                <li><a href="/orders">About</a></li>
+                <li><a href="/orders">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-single-order">
+        <div class="single-order-box">
+            <div class="single-order-box-inner">
+                <h2>Name: {{ order.customer_name}}</h2>
+                <h3>Quantity: {{ order.quantity}}</h3>
+                <h3>Game: {{ order.game_title}}</h3>
+                <h5>Date: {{ order.order_date}}</h5>
+            </div>
+        </div>
+        <a href="/orders" class="go-back"><i class="fa-solid fa-arrow-left"></i>go back</a>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <h4>Copyright © 2022 Game Freek Inc. All rights reserved.</h4>
+        </div>
+    </footer>
+
+</body>
+
+</html>
