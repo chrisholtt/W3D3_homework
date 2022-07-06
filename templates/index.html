@@ -20,6 +20,12 @@
     <header>
         <nav>
             <h1 id="title">GameFreek</h1>
+            <i class="fa-light fa-alien-8bit"></i>
+            <div class="search-bar-wrapper">
+                <a href="/orders"><i class="fa-solid fa-magnifying-glass" id="search-bar-icon"></i></a>
+                <input type="text" class="search-bar" placeholder="Search for games...">
+                <i class="fa-solid fa-caret-down" id="search-bar-dropdown"></i>
+            </div>
             <ul>
                 <li><a href="/orders">Home</a></li>
                 <li><a href="/orders">About</a></li>
@@ -42,9 +48,14 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consectetur rem tenetur soluta
                     mollitia, tempora beatae, necessitatibus repudiandae qui atque perspiciatis. Veritatis vitae omnis
                     nihil repudiandae quasi dolorum libero eaque.</p>
-
+                <img src="/static/xbox-controller.jpeg" alt="xbox-controller" srcset="" id="xbox-img">
             </div>
             <div class="orders">
+                <div class="orders-title-box">
+                    <i class="fa-solid fa-gamepad" id="gamepad"></i>
+                    <h2>Orders: </h2>
+                    <i class="fa-solid fa-gamepad" id="gamepad"></i>
+                </div>
                 <div class="orders-inner">
                     {% for order in orders %}
                     <hr>
@@ -53,7 +64,9 @@
                     <h3>Game: {{ order.game_title}}</h3>
                     <h5>Date: {{ order.order_date}}</h5>
                     <a href="/order/{{order.index}}">
-                        <h5>view order</h5>
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
                     </a>
                     <hr>
                     {% endfor %}

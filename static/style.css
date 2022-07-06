@@ -16,10 +16,34 @@ body {
     margin-left: 10px;
 }
 
+.search-bar {
+    height: 30px;
+    width: 30vw;
+    border-radius: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+#search-bar-icon {
+    margin-left: 10px;
+    margin-top:10px;
+    position: absolute;
+    color: var(--Gray);
+    z-index: 10;
+}
+
+#search-bar-dropdown{
+    margin-top:10px;
+    position: absolute;
+    color: white;
+    z-index: 10;
+}
+
 nav {
     display: flex;
     background: var(--Purple);
     justify-content: space-between;
+    align-items: center;
     border-radius: 0px 0px 10px 10px;
     color: white;
 }
@@ -27,11 +51,14 @@ nav {
 nav h1 {
     font-family: 'Roboto', sans-serif;
     margin-left: 10px;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
     
 }
 
 nav h1:hover {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.55rem;
     margin-left: 10px;
         text-shadow:0px 0px 30px #fdec6e;
     -moz-transition: all 0.2s ease-in;
@@ -57,11 +84,13 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: all 0.2s ease-in;
+    font-size: 1rem;
 
 }
 
 nav ul li a:hover {
     color: white;
+    font-size: 1.05rem;
     text-decoration: none;
     text-shadow:0px 0px 30px #fdec6e;
     -moz-transition: all 0.2s ease-in;
@@ -74,6 +103,26 @@ nav ul li a:hover {
 .hero-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.orders-title-box{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 40px;
+}
+
+#gamepad {
+    font-size: 1.5rem;
+    transition: all 2s ease-in;
+
+}
+
+#gamepad:hover {
+    font-size: 1.6rem;
+    transform: rotate(360deg);
+    transition: all 2s ease-in;
+    color: #5333ed;
 }
 
 .orders {
@@ -89,6 +138,12 @@ nav ul li a:hover {
 .orders-inner {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#xbox-img {
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--Gray);
 }
 
 
@@ -126,3 +181,4 @@ nav ul li a:hover {
     color: var(--Gray);
     text-decoration: none;
 }
+
